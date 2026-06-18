@@ -1,58 +1,44 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# 🎸 Sistem Informasi Manajemen Studio Musik (Studio-Fi)
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+[![Laravel Version](https://img.shields.io/badge/Laravel-13.x-red.svg)](https://laravel.com)
+[![PHP Version](https://img.shields.io/badge/PHP-8.5.7-blue.svg)](https://php.net)
+[![Filament Version](https://img.shields.io/badge/Filament-v5-orange.svg)](https://filamentphp.com)
 
-## About Laravel
+Sistem Informasi Manajemen Studio Musik adalah aplikasi berbasis web mutakhir yang dirancang khusus untuk mendigitalisasi dan memodernisasi seluruh alur operasional bisnis studio musik dari hulu ke hilir. Proyek ini dibangun menggunakan kombinasi teknologi terbaru di tahun 2026: **PHP 8.5.7**, **Laravel 13**, dan admin panel berbasis TALL Stack yaitu **Filament v5**.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+---
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## ✨ Fitur Utama
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+* **Role-Based Access Control (RBAC):** Pemisahan hak akses yang ketat antara **Admin (Owner)** dan **Kasir** menggunakan integrasi *Spatie Permission*.
+* **Sistem Penjadwalan Real-time:** Mengunci slot waktu sewa secara akurat pada sistem basis data guna mencegah terjadinya jadwal bentrok (*double-booking*).
+* **Transaksi Booking Terintegrasi:** Form transaksi kasir yang mendukung relasi *Many-to-Many* untuk penyewaan ruangan sekaligus instrumen musik tambahan dalam satu waktu.
+* **Kalkulasi Biaya Otomatis:** Sistem otomatis menghitung akumulasi total harga sewa studio dan alat musik pendukung secara instan guna menghindari *human error*.
+* **Pencatatan Keuangan & Log Audit:** Melacak riwayat pembayaran (*payments*) serta mencatat perubahan status transaksi melalui *booking status logs*.
 
-## Learning Laravel
+---
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## 🛠️ Spesifikasi Teknologi
 
-In addition, [Laracasts](https://laracasts.com) contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+* **Language:** PHP v8.5.7
+* **Framework:** Laravel v13.x
+* **Admin Panel Framework:** Filament v5 (TALL Stack: Tailwind CSS, Alpine.js, Laravel, Livewire)
+* **Database:** MariaDB / MySQL v10.4.32 (Managed via Laragon & HeidiSQL)
 
-You can also watch bite-sized lessons with real-world projects on [Laravel Learn](https://laravel.com/learn), where you will be guided through building a Laravel application from scratch while learning PHP fundamentals.
+---
 
-## Agentic Development
+## 🚀 Langkah Instalasi (Local Deployment)
 
-Laravel's predictable structure and conventions make it ideal for AI coding agents like Claude Code, Cursor, and GitHub Copilot. Install [Laravel Boost](https://laravel.com/docs/ai) to supercharge your AI workflow:
+Ikuti langkah-langkah berikut untuk menjalankan proyek ini di komputer lokal Anda:
 
-```bash
-composer require laravel/boost --dev
+1. **Clone Repositori**
+   ```bash
+   git clone https://github.com/Mufidaxelsen/Booking-Studio
+2. composerr install
+3. cp .env.example .env
+4. php artisan key:generate
+5. php artisan migrate:fresh --seed
+6. php artisan serve
 
-php artisan boost:install
-```
 
-Boost provides your agent 15+ tools and skills that help agents build Laravel applications while following best practices.
 
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
